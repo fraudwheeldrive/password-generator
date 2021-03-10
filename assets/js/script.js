@@ -6,20 +6,13 @@ document.querySelector("#generate").addEventListener("click", promptMe);
 // password length function 
 function promptMe () {
   var userPasswordLength = prompt ("welcome to the passowrd generator, please select password length between 8 and 138 to continue");
-  if (userPasswordLength < 8) {
-    alert ("please select a number greater than 8");
-  }  
-  if(userPasswordLength > 138) {
-    alert ("please select a number less than 138")
-  }
-  if (userPasswordLength === isNaN()) {
-    alert("please select only a number")
-  }
-  if (isNaN(userPasswordLength)){
+
+  if (userPasswordLength < 8 || userPasswordLength > 138 || isNaN(userPasswordLength)) {
   alert("Please enter a number between 8 and 138")
   }
-};
+  else prompt ("Thank you")
 
+};
 
 
 
