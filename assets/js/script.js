@@ -13,8 +13,6 @@ var specialCharArray = specialChar.split("");
 
  alert("Welcome to the Password Generator, to get started please select 'generate password'"); 
 
- document.querySelector("#generate").addEventListener("click", genPwd);
-
 //generate password function 
 
 function genPwd (){
@@ -25,17 +23,21 @@ function genPwd (){
 
 var pwdLength = prompt("Please select a password length between 8 and 128 characters");
 
-//set password length , need to refactor to make recursive untill right answer is selected 
+//while loop to continuously prompt user to enter length between 8-128
 
-if (pwdLength < 8 || pwdLength > 138 || isNaN(pwdLength)) {
-  prompt("Please enter a number between 8 and 138")
-if (pwdLength < 8 || pwdLength > 138 || isNaN(pwdLength)) 
-  prompt("Please enter a number between 8 and 138")
-if (pwdLength < 8 || pwdLength > 138 || isNaN(pwdLength)) 
-alert("You have made too many incorrect selections, please start again")  
+while(pwdLength < 8 || pwdLength > 138 || isNaN(pwdLength)){
+  pwdLength = prompt("Please enter a number between 8 and 128")
 }
 
-// select other variables and push into array that final password will be generated from. 
+// if statement begins, checks and validates input of pwdLength is correct then moves to else /if statemtns 
+
+if (pwdLength < 8 || pwdLength > 138 || isNaN(pwdLength)) {
+ 
+}
+
+// create in put for arrays for uppercase, lowercase, special characters and numbers 
+// uses Array.prototype.push.apply to add user input into arrays like objects defined at the top of the 
+// the page, the apply() fuction combines the arrays into one another to create selectChar
 
 else{ 
 
@@ -53,65 +55,46 @@ else{
 }
 
 if(confirm("Please click OK to include numbers in your password")){
- Array.prototype.pish.apply(selectChar, numberArray); 
+ Array.prototype.push.apply(selectChar, numberArray); 
 }
 
-if(confirm("Please click OK to include special characters in your password ")){
-  Array.prototype.push.apply(selectChar, specialCharArray);
-}
+// validates the above if statements, if user choose "cancel" for all criteria then
+// length === 0 and will promp the user to start again 
 
 if(selectChar.length===0){
   alert("you did not select any password critera. Please note in order to generate your password you must select at least one of the options above. Please start over, thank you. ")
 }
 
+// for loop to validate and generate password 
+
+else{
+  
+  for(var i=0; i< pwdLength; i++) {
+    var random = Math.floor(Math.random() * selectChar.length);
+    pwdFinal += selectChar[random];
+  }
 }
-// for loop 
+}
 
+// print generated pass word to text box on site 
 
-
-
+//document.getElementById("#password").innerHTML = pwdFinal;
 };
-
-
-
-// for loop to confirm info and create password 
-
-// display the result 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 // Get references to the #generate element
-//var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-//function writePassword() {
-  //var password = generatePassword();
-  //var passwordText = document.querySelector("#password");
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-  //passwordText.value = password;
+  passwordText.value = password;
 
-
+}
 
 // Add event listener to generate button
-//generateBtn.addEventListener("click", writePassword);
-
-
-//document.querySelector("#generate").addEventListener("click", pwdGenerate);
+document.querySelector("#generate").addEventListener("click", genPwd);
