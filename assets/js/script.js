@@ -9,10 +9,6 @@ var lowerCaseArray = lowerCase.split("");
 var numberArray = number.split("");
 var specialCharArray = specialChar.split(""); 
 
-// User prompt to begin password generation process 
-
- alert("Welcome to the Password Generator, to get started please select 'generate password'"); 
-
 //generate password function, SelectChar uses array inputs from else statment in function, 
 // pwdfinal is blank string for the password that is generated
 
@@ -22,7 +18,7 @@ function genPwd (){
 
 //set password length 
 
-var pwdLength = prompt("Please select a password length between 8 and 128 characters");
+var pwdLength = prompt(" Welcome to the Secure Password Generator, Please select a password length between 8 and 128 characters");
 
 //while loop to continuously prompt user to enter length between 8-128
 
@@ -40,17 +36,23 @@ if (pwdLength < 8 || pwdLength > 138 || isNaN(pwdLength)) {
 // uses Array.prototype.push.apply to add user input into arrays like objects defined at the top of the 
 // the page, the apply() fuction combines the arrays into one another to create selectChar
 
-else{ 
+//add alert to let user know they must choose at leaste on of the following criteria. 
 
-  if(confirm("Please click Ok to include special characters in your password")){
+
+
+else{
+
+  alert("please pick at lease one of the following criteria for your secure password, failure to do so will result in the termination of the  password generator"); 
+
+if(confirm("Please click Ok to include special characters in your password")){
     Array.prototype.push.apply(selectChar, specialCharArray);
 }
 
- if(confirm(" Please click Ok to include lowercase letters in your password")){
+ if(confirm("Please click Ok to include lowercase letters in your password")){
    Array.prototype.push.apply(selectChar, lowerCaseArray);
 }
 
- if(confirm(" Please click OK to include Uppercase letters in your password")){
+ if(confirm("Please click OK to include Uppercase letters in your password")){
   Array.prototype.push.apply(selectChar, upperCaseArray);
 
 }
@@ -63,7 +65,7 @@ if(confirm("Please click OK to include numbers in your password")){
 // length === 0 and will promp the user to start again 
 
 if(selectChar.length===0){
-  alert("you did not select any password critera. Please note in order to generate your password you must select at least one of the options above. Please start over, thank you. ")
+  alert("You did not select any password critera. Please note in order to generate your password you must select at least one of the options above. Please start over, thank you. ")
 }
 
 // for loop to validate and generate password , math.floor to round down to whole numbers
