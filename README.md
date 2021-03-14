@@ -46,10 +46,10 @@ user is prompted to start again.
 ![webiste image](https://github.com/fraudwheeldrive/password-generator/blob/main/assets/images/Password%20generator%20image.PNG)
 
 ## Website location 
-website can be viewed at [https://fraudwheeldrive.github.io/password-generator/]
+website can be viewed at https://fraudwheeldrive.github.io/password-generator/
 
 ## Github Repository 
-Github Repository can be viewed at [https://github.com/fraudwheeldrive/password-generator]
+Github Repository can be viewed at https://github.com/fraudwheeldrive/password-generator
 
 ##  Built With 
 Password Generator is built with:
