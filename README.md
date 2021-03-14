@@ -39,7 +39,7 @@ One password length is set, the user is prompted to choose from at least one of 
 As long as one criteria is selected a random password will be generated at the specified length. If no criteria is selected, 
 user is prompted to start again. 
 
-## Rough outline of logic
+## Rough Outline of Logic
 ![Wireframe diagram showing logic of password generation](https://github.com/fraudwheeldrive/password-generator/blob/main/assets/images/wireframe%20js%20logic%20rough.png)
 
 ## Image of Webiste 
@@ -48,13 +48,14 @@ user is prompted to start again.
 ## Website location 
 website can be viewed at [https://fraudwheeldrive.github.io/password-generator/]
 
-## github Repository 
+## Github Repository 
 Github Repository can be viewed at [https://github.com/fraudwheeldrive/password-generator]
 
-##  Built with 
-Horiseon's webiste is built with 
+##  Built With 
+Password Generator is built with:
 *HTML
 *CSS
+*Javascript
 ## Contribution 
 HTML and CSS Styling provided by U of T SCS Coding bootcamp, 
 Javascript code done by Andrew core 
