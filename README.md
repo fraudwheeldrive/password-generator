@@ -45,3 +45,26 @@ user is prompted to start again.
 ## Image of Webiste 
 ![webiste image](https://github.com/fraudwheeldrive/password-generator/blob/main/assets/images/Password%20generator%20image.PNG)
 
+## Website location 
+website can be viewed at [https://fraudwheeldrive.github.io/password-generator/]
+
+##github Repository 
+Github Repository can be viewed at [https://github.com/fraudwheeldrive/password-generator]
+
+##  Built with 
+Horiseon's webiste is built with 
+*HTML
+*CSS
+## Contribution 
+HTML and CSS Styling provided by U of T SCS Coding bootcamp, 
+Javascript code done by Andrew core 
+
+## References 
+### https://developer.mozilla.org/en-US/
+### https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+### https://www.w3schools.com/
+### https://www.w3schools.com/java/java_while_loop.asp
+
+
+
+#### © 2021 Fraudwheeldrive, Inc.
