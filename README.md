@@ -48,7 +48,7 @@ user is prompted to start again.
 ## Website location 
 website can be viewed at [https://fraudwheeldrive.github.io/password-generator/]
 
-##github Repository 
+## github Repository 
 Github Repository can be viewed at [https://github.com/fraudwheeldrive/password-generator]
 
 ##  Built with 
