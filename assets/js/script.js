@@ -13,7 +13,8 @@ var specialCharArray = specialChar.split("");
 
  alert("Welcome to the Password Generator, to get started please select 'generate password'"); 
 
-//generate password function 
+//generate password function, SelectChar uses array inputs from else statment in function, 
+// pwdfinal is blank string for the password that is generated
 
 function genPwd (){
   var selectChar = [];
@@ -65,7 +66,7 @@ if(selectChar.length===0){
   alert("you did not select any password critera. Please note in order to generate your password you must select at least one of the options above. Please start over, thank you. ")
 }
 
-// for loop to validate and generate password 
+// for loop to validate and generate password , math.floor to round down to whole numbers
 
 else{
   
@@ -76,25 +77,11 @@ else{
 }
 }
 
-// print generated pass word to text box on site 
+// print generated password to text box on site 
 
-//document.getElementById("#password").innerHTML = pwdFinal;
+document.getElementById("password").innerHTML = pwdFinal;
+
 };
-
-
-
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
 
 // Add event listener to generate button
 document.querySelector("#generate").addEventListener("click", genPwd);
